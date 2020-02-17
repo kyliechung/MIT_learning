@@ -1,0 +1,219 @@
+Week 1: Python Basics
+1. Introduction to Python
+
+1st video - introduction
+ 
+Overview of course
+- learn computational modes of thinking
+- Master the art of computational problem solving
+- Make computers do what you want them to do
+
+Topics
+- Represent knowledge with data structures
+- Iteration and recursion as computational metaphors
+- Abstraction of procedures and data types
+- Organise and modularise systems using object classes and methods
+- Different classes of algorithms, searching and sorting
+- Complexity of algorithms
+
+What does a computer do? 
+- Fundamentally:
+    - Performs calculations (a billion per sec) and remembers results(100s gigabytes of storage) to reuse
+    - What kind of calculations?
+        - Build-in to the language
+        - Ones that you define as the programmer
+
+Simple calculations enough?
+- Searching the World Wide Web
+    - Would take 5.2 days to find something use using simple operations
+- Playing chess
+    - 30 minutes to decide each move
+- Even with fast computers, we need algorithms to take those simple computations into something more powerful
+
+Enough storage?
+- What if we would pre-compute information and then look up the answer
+    - Playing chess as an ex.
+        - We don’t have enough space to do that, brute force doing won’t work.
+
+Are there limits?
+- Despite its speed and size, a computer does have limitations
+    - Some problems still too complex
+        - Accurate weather prediction at a local scale
+        - Cracking encryption schemes
+    - Some problems are fundamentally impossible to compute
+        - The Turing Halting Problem: Predicting whether a piece of code will always halt with an answer for any input
+
+
+2nd video - types of knowledge
+
+Computational problem solving
+What is computation?
+	- What is knowledge?
+        - Declarative knowledge
+        - Statements of fact (can’t really find new information)
+    - Declarative knowledge
+        - Statements of truth/facts
+    - Imperative knowledge 
+        - ‘How to’ methods or recipes, gives us a sequence of instructions to find the solution (can find new information which is very useful)
+
+What is a recipe/an algorithm?
+- Sequence of simple steps
+- Flow of control process that specifies when each step is executed
+- A means of determining when to stop
+
+
+Exercise 1
+1. What is the difference between an Algorithm and a Program?
+- An algorithm is a conceptual idea, a program is a concrete instantiation of an algorithm.
+2. A computational mode of thinking means that everything can be viewed as a math problem involving numbers and formulas.
+- True
+3. Computer Science is the study of how to build efficient machines that run programs. 
+- False
+4. The two things every computer can do are:
+- Perform calculations
+- Remember the results
+
+Exercise 2
+1. Declarative knowledge refers to statements of fact
+- True
+2. Imperative knowledge refers to ‘how to’ methods.
+- True
+3. A recipe for deducing the square root involves guessing a start value for y. Without another recipe to be told how to pick a starting number, the computer cannot generate one on its own. 
+- True 
+
+
+3rd video - Machine
+
+Computers are machines
+- How to capture a recipe in a mechanical process
+    - Fixed program computer
+        - They did a specific calculations and was designed to do exactly that. Eg. A calculator
+    - Stored program computer
+        - Machine stores and executes instructions
+        - Can load a Sequence of instructions (programs) stored inside computer
+        - Special program (interpreter) executes each instruction in order
+        - Use tests to change flow of control through sequence, to stop when done
+
+A basic machine architecture
+- it has memory, arithmetic logic unit (ALU - is going to do the primitive operations for us), control unit that keeps track of where things are and asks the ALU to do work, and occasionally uses tests to jump around in the code.
+
+- Control unit = program unit - points computer to the next set of instructions to execute in the program
+- ALU = accumulator
+
+
+Stored program computer
+- Sequence of instructions stored inside computer
+    - Built from predefined set of primitive instructions
+        - Arithmetic and logic
+        - Simple tests
+        - Moving data
+- Special program (interpreter) executes each instruction in order
+    - Use tests to change flow of control through sequence
+    - Stop when done
+
+What are the basic primitives?
+- Turing showed you can compute anything using 6 primitives
+- Modern programming language have more convenient set of primitives
+- Can abstract methods to create new primitives
+- Turing complete: Anything computable in one language is computable in any other programming language 
+
+Exercise 3
+1. A stored program computer is designed to compute precisely one computation, such as square root, or the trajectory of a missile.
+- False
+2. A fixed program computer is designed to run any computation, by interpreting a sequence of program instructions that are read into it
+- False
+3. A program counter
+- Points the computer to the next instruction to execute in the program.
+4. What does it mean when we say that “the computer walks through the sequence executing some computation”?
+- The computer executes the instructions mostly in a linear sequence, except sometimes it jumps to a different place in the sequence. 
+5. In order to compute everything that is computable, every computer must be able to handle the 16 most primitive operations.
+- False
+
+4th video - Language
+
+Creating recipes
+- A programming language provides a set of primitive operations
+- Expressions are complex but legal combinations of primitives in a programming language
+- Expressions and computations have values (meanings in a programming language/ Let us map between what the computer actually does and what we want it to do)
+
+Aspects of Language
+- Primitive constructs
+    - Natural/ Real Language for eg. English: words
+    - Programming language: numbers, strings, simple operators
+- Syntax - to know if this is a legal sentence or not
+    - Eg. English:
+        - “Cat dog boy” 
+            - Not syntactically valid
+        - “Cat hugs boy”
+            - Syntactically valid
+    - eg. programming language:
+        - “Hi”5
+            - Not syntactically valid
+        - 3.2*5
+            - Syntactically valid
+- Static semantics is which syntactically valid strings have meaning (what does this expression evaluate to?)
+    - Eg. English:
+        - “I are hungry”
+            - Syntactically valid (put together properly): a pronoun, verb, adj.
+            - But static semantic error
+    - Eg. Programming language:
+        - 3.2*5
+            - Syntactically valid
+        - 3+”hi”
+            - Syntactically valid: primitive, operator, primitive
+            - Static semantic error: can’t add number and string together
+- Semantics is the meaning associated with a syntactically correct string of symbols with no static semantic errors
+    - Eg. English: can have many meanings even if statically and semantically correct
+        - “Flying planes can be dangerous” 
+            - -has multiple interpretations to it
+        - “This reading lamp hasn’t uttered a word since I bought it?”
+            - playing on the word ‘reading’
+    - eg. Programming languages: have only one meaning but may not be what programmer intended
+
+https://www.quora.com/Whats-the-relationship-between-syntax-static-semantics-and-semantics (a good explanation)
+
+Where things go wrong
+- Syntactic errors
+    - Common and easily caught
+- Static semantic errors
+    - Some languages check for these before running program
+    - Can cause unpredictable behaviour
+- No semantic errors but you get different meaning than what programmer intended
+    - Program crashes, stops running
+    - Program runs forever with no answer
+    - Program gives an answer but different than expected
+
+Our Goal
+- Learn the syntax and semantics of a programming language
+- Learn how to use the elements to translate “recipes” for solving problem into a form that the computer can use to do the work for us
+- Learn computational modes of thought enable us to use a suite of methods to solve complex problems
+
+Exercise 4
+Syntax - Determines whether a string is legal
+
+Static semantics - Determines whether a string has meaning
+
+Semantics - Assigns a meaning to a legal sentence
+
+5th Video: Types
+Python Programmes
+- A program is a sequence of definitions and commands
+    - Definitions evaluated (ways of assigning names to values/creating procedures that we will treat as if primitives
+    - Commands executed by Python interpreter in a shell
+        - Shell is window where I can type expressions, that gets passed into the Python interpreter, it figures out the semantics (what’s the meaning associated with the expression), and it prints out the result
+- Commands (statements) instruct interpreter to do something
+- Can be typed directly in a shell or stored in a file that is read into the shell and evaluated
+
+Objects
+- Programs manipulate data objects
+- Objects have a type that defines the kinds of things programs can do to them
+- Objects are:
+    - Scalar (cannot be subdivided)
+    - Non-scalar (have internal structure that can be accessed/pull out parts)
+
+Scalar objects
+- int - represent integers, eg.5
+- float - represent real numbers, eg. 3.27
+- bool - represent Boolean values True and False
+- NoneType - special and has one value, None
+- Can use type() to see the type of an object
