@@ -212,7 +212,7 @@ Objects
     - Non-scalar (have internal structure that can be accessed/pull out parts)
 
 Scalar objects
-- int - represent integers, eg.5
+- ```int``` - represent integers, eg.5
 - float - represent real numbers, eg. 3.27
 - bool - represent Boolean values True and False
 - NoneType - special and has one value, None
